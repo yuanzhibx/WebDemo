@@ -4,13 +4,16 @@
         <meta charset="UTF-8">
         <title>JS 编写位置</title>
 
+        <!--
+            可以将 js 代码编写到外部 js 文件中, 然后通过 script 标签引入, 可在不同的网页中同时引用, 也可以利用浏览器缓存机制, 推荐使用
+            script 一旦用于引入外部文件, 则不能在内部编写代码
+        -->
+        <script src="./js/script.js"></script>
+
         <!-- 可以将 js 代码编写到 script 标签 -->
         <script>
-            alert("scriptAlert")
+            alert("scriptAlert");
         </script>
-
-        <!-- 可以将 js 代码编写到外部 js 文件中, 然后通过 script 标签引入, 可在不同的网页中同时引用, 也可以利用浏览器缓存机制, 推荐使用 -->
-        <script src="../../VSCodeWorkspace/YuanzhibxWebDemo/com.yanbingxu.day01/js/script.js"></script>
 
     </head>
     <body>
