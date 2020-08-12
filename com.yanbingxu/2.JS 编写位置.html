@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS 编写位置</title>
+
+        <!-- 可以将 js 代码编写到 script 标签 -->
+        <script>
+            alert("scriptAlert")
+        </script>
+
+        <!-- 可以将 js 代码编写到外部 js 文件中, 然后通过 script 标签引入, 可在不同的网页中同时引用, 也可以利用浏览器缓存机制, 推荐使用 -->
+        <script src="../../VSCodeWorkspace/YuanzhibxWebDemo/com.yanbingxu.day01/js/script.js"></script>
+
+    </head>
+    <body>
+
+        <!-- 虽然可以写在标签的属性中, 但结构与行为耦合, 不方便维护, 不推荐使用 -->
+
+        <!-- 可以将 js 代码编写到标签的 onclick 属性中, 点击按钮, js 代码执行 -->
+        <button onclick="alert('Yuanzhibx_onclickAlert')">button</button>
+
+        <!-- 可以将 js 代码编写到标签的 href 属性中, 点击超链接, js 代码执行 -->
+        <a href="javascript:alert('Yuanzhibx_hrefAlert')">我是超链接~~~</a>
+        <a href="javascript:;">我也是超链接~~~</a>
+
+    </body>
+</html>
