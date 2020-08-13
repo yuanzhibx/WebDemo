@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Number</title>
+		<script>
+            /**
+			 * 在 JS 中所有数值都是 Number 类型 (包括整数和浮点数)
+             */
+            // 数字 2200
+            var a = 2200;
+            a = 43.96;
+            // 字符串 2200
+            var b = "43.96";
+
+            /**
+			 * 可使用运算符 typeof 检查变量类型
+			 * 语法: typeof 变量
+             */
+			console.log(typeof a);
+            console.log(typeof b);
+
+            /**
+			 * JS 中可以表示的数字的最大值
+			 * 		Number.MAX_VALUE = 1.7976931348623157e+308
+             */
+            console.log(Number.MAX_VALUE);
+
+            /**
+             * Infinity
+             * 		- 使用 Number 表示的数字超过了最大值则会返回一个 Infinity (正无穷)
+             * 		- 使用 Number 表示的数字超过了最小值则会返回一个 -Infinity (负无穷)
+             * 		- 使用 typeof 检查 Infinity 返回 Number
+			 */
+            console.log(Number.MAX_VALUE * Number.MAX_VALUE);
+            a = Infinity;
+            console.log(typeof a);
+
+            /**
+             * NaN 是一个特殊的数字, 表示 Not A Number
+             * 		- 使用 typeof 检查 NaN 返回 Number
+             */
+			a = "abc" * "bcd";
+			console.log(typeof a);
+
+            /**
+             * JS 中可以表示的数字的最小值 (大于 0 的最小值 或 最小的正值)
+             * 		Number.MIN_VALUE = 5e-324
+             */
+            a = Number.MIN_VALUE;
+            console.log(a);
+
+            /**
+			 * JS 中整数运算基本可以保证精准
+             */
+            var c = 19990729 + 19981218;
+            console.log(c);
+
+            /**
+			 * JS 中浮点数运算可能得到一个不精确的结果
+			 * 		- 不要使用 JS 进行对精确度要求较高的运算
+             */
+            c = 0.1 + 0.2;
+            console.log(c);
+
+		</script>
+	</head>
+	<body>
+		<h1>Number</h1>
+	</body>
+</html>
