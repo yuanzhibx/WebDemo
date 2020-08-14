@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>非布尔值的与或运算</title>
+	</head>
+	<script>
+        /**
+		 * 非布尔值的 && || 运算
+		 * 	- 对一个非布尔值进行运算时, 则会将其转换为布尔值, 然后再进行与或运算, 并返回原值
+         */
+
+        /**
+		 * 与运算:
+         * 	- 如果两个值都为 true, 则返回后面的 true
+		 * 	- 如果两个值中有 false, 则返回靠前的 false
+         * 	- 如果第一个值为 true, 则必然返回第二个值
+         * 	- 如果第一个值为 false, 则直接返回第一个值
+         */
+		// true && true
+        var result = 1 && 2;
+        console.log("result = " + result);// 2
+        // false && true
+        result = 0 && 2;
+        console.log("result = " + result);// 0
+        // false && false
+        result = NaN && 0;
+        console.log("result = " + result);// NaN
+
+		console.log("--------------------------");
+
+        /**
+         * 或运算:
+         * 	- 如果两个值都为 true, 则返回前面的 true
+         * 	- 如果第一个值为 true, 则直接返回第一个值
+         * 	- 如果第一个值为 false, 则直接返回第二个值
+         */
+        // true || true
+        result = 1 || 2;
+        console.log("result = " + result);// 1
+        // false || true
+        result = NaN || 1;
+        console.log("result = " + result);// 1
+		// false && false
+		result = NaN || 0;
+        console.log("result = " + result);// 0
+
+	</script>
+	<body>
+		<h1>非布尔值的与或运算</h1>
+	</body>
+</html>
