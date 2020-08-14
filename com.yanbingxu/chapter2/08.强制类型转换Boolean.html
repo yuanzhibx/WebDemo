@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>强制类型转换Boolean</title>
+		<script>
+            /**
+             * 将其他数据类型转换为 Boolean
+             */
+            var a = 123;
+            console.log(typeof a);
+            console.log(a);
+
+            /**
+             * 方式一:
+             * 		- 调用 Boolean() 函数, 并将被转换的数据作为参数传递给函数
+             */
+
+            /**
+			 * 数字 --> boolean
+             * 		- 除了 0 和 NaN, 其余都是 true
+             */
+            a = Boolean(a);
+            console.log(typeof a);// boolean
+            console.log(a);// true
+			a = -123;
+            a = Boolean(a);
+            console.log(a);// true
+            a = 0;
+            a = Boolean(a);
+            console.log(a);// false
+            a = Infinity;
+            a = Boolean(a);
+            console.log(a);// true
+            a = NaN;
+            a = Boolean(a);
+            console.log(a);// false
+
+            /**
+             * 字符串 --> boolean
+             * 		- 除了空串 ( "" ) 都是 true
+             */
+            a = "true";
+            a = Boolean(a);
+            console.log(a);// true
+            a = "false";
+            a = Boolean(a);
+            console.log(a);// true
+            a = "";
+            a = Boolean(a);
+            console.log(a);// false
+            a = " ";
+            a = Boolean(a);
+            console.log(a);// true
+
+            /**
+             * null --> boolean
+             * 		- false
+             */
+            a = null;
+            a = Boolean(a);
+            console.log(a);// false
+
+            /**
+             * undefined --> boolean
+             * 		- false
+             */
+            a = undefined;
+            a = Boolean(a);
+            console.log(a);// false
+
+            /**
+			 * 对象也会转换为 true
+             */
+
+		</script>
+	</head>
+	<body>
+		<h1>强制类型转换Boolean</h1>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>运算符</title>
+		<script>
+            /**
+			 * 运算符 (操作符): 通过运算符可以对一个或多个值进行运算, 并获取运算结果
+			 * 		- typeof: 获得一个值的类型, 将该值的类型以字符串的形式返回
+             */
+            var a = 123;
+            var result = typeof a;
+            console.log(result);
+
+            /**
+			 * 算数运算符
+			 * 		当对非 Number 类型的值进行运算时, 会将这些值转化为 Number 然后再运算
+			 * 		任何数和 NaN 运算, 结果都为 NaN
+             */
+
+            /**
+             * +
+             *		- 可以对两个值进行加法运算, 并将结果返回
+             * 		- 如果对两个字符串进行加法运算, 则会做拼串操作, 将两个字符串拼接为一个并返回
+			 * 	 	- 任何的值和字符串做加法运算, 都会先转化为字符串, 然后和字符串进行拼串
+             */
+            var b = 123;
+            result = b + 1;
+            console.log(result);// 124
+            result = true + false;// 1 + 0
+            console.log(result);// 1
+            result = 2 + null;// 2 + 0
+            console.log(result);// 2
+            result = 2 + NaN;
+            console.log(result);// NaN
+            result = "123" + "456";
+            console.log(result);// 123456
+            console.log(typeof result);// string
+            result = 123 + "1";
+            console.log(result);// 1231
+
+            /**
+			 * 字符串隐式类型转换, 浏览器自动完成
+             */
+			var c = 4396;
+			c = c + "";
+			console.log(typeof result);// string
+            console.log("c = " + c);
+
+            /**
+             * -
+             * 		- 可以对两个值进行减法运算, 并将结果返回
+             */
+            result = 100 - 1;
+            console.log(result);// 99
+            result = 100 - true;
+            console.log(result);// 99
+            result = 100 - null;
+            console.log(result);// 100
+            result = 100 - "1";
+            console.log(result);// 99
+
+            /**
+             * *
+             * 		- 可以对两个值进行乘法运算, 并将结果返回
+             */
+            result = 2 * 2;
+            console.log(result);// 4
+            result = 2 * "8";
+            console.log(result);// 16
+            result = 2 * undefined;
+            console.log(result);// NaN
+            result = 2 * null;
+            console.log(result);// 0
+
+            /**
+             * 数值隐式类型转换, 浏览器自动完成
+			 * 		- 任何值做 - * / 运算时都会自动转换为 Number
+             */
+            var d = "123";
+            d = d - 0;
+            console.log(typeof result);// number
+            console.log("d =  " + d);// d =  123
+
+            /**
+             * /
+             * 		- 可以对两个值进行除法运算, 并将结果返回
+             */
+            result = 4 / 2;
+            console.log(result);// 2
+
+            /**
+             * %
+             * 		- 取模运算 (取余)
+             */
+            result = 9 % 3;
+            console.log("result = " + result);// 0
+            result = 9 % 4;
+            console.log("result = " + result);// 1
+            result = 9 % 5;
+            console.log("result = " + result);// 4
+
+		</script>
+	</head>
+	<body>
+		<h1>运算符</h1>
+	</body>
+</html>

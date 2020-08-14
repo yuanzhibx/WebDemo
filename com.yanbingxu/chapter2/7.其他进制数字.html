@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>其他进制数字</title>
+		<script>
+            /**
+			 * 在 js 中, 如果需要表示 16 进制数字, 则需要以 0x 开头
+             */
+            var a = 123;
+            a = 0xf;
+            console.log(a);// 15
+			a = 0xCafe;
+			console.log(a);// 51966
+
+            /**
+             * 在 js 中, 如果需要表示 8 进制数字, 则需要以 0 开头
+             */
+            a = 0o70;
+            console.log(a);// 56
+
+            /**
+             * 在 js 中, 如果需要表示 2 进制数字, 则需要以 0b 开头
+             */
+            a = 0b10;
+            console.log(a);// 2
+
+            /**
+			 * 像 "070" 这种字符串, 不同浏览器解析方式不同, 有的会当做 8 进制, 有的会当做 10 进制解析
+			 * 可使用 parseInt() 传递字符串和数字的进制
+             */
+            a = "070";
+            a = parseInt(a, 10);
+            console.log(a);// 70
+
+		</script>
+	</head>
+	<body>
+		<h1>其他进制数字</h1>
+	</body>
+</html>
